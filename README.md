@@ -1,5 +1,8 @@
 # QuickDrive
 
+### Inspiration
+It's a little weird our phones have several thousand times the processing power of the Apollo computer but it struggles to pre-order my Cold Brew from Starbucks
+
 ### Concept
 Using OpenCV object recognition, as well as TensorFlow by Google to teach the average Android phone to drive
 
