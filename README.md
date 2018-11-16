@@ -14,5 +14,11 @@ Parts of the project:
   
 DISCLAIMER (for those who need one): Obviously this ought not to be used directly with a car, so don't do it
 
-### Step 1: Lane detection
+### Step 0: Setting up the Android project
+This isn't really a tutorial, more of a scratchpad to take notes on my project if possible, and as such, attached to each of these steps is a short explaination but not a line by line analysis of the code. The first step is really to create the project and setup the TensorFlow and OpenCV Android libraries.
+
+##### How to setup TensorFlow for Android Studio:
+  
+
+### Step 2: Lane detection
 A while ago, I wrote a fairly simply python program to perform lane detection (code saved as laneClassify.py), so the first step is to completely repurpose this and rewrite it in java. The procedure is fairly simple
