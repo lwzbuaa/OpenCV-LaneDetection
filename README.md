@@ -37,6 +37,7 @@ Add Native libraries:
 Source: https://github.com/davidmigloz/go-bees/wiki/Setup-OpenCV-3.1.0-in-Android-Studio-2.2 <-- Literally the best guide to OpenCV for Android
 
 #### How to setup TensorFlow for Android Studio:
+Google is slowly phasing out the old TensorFlow mobile and is switching to TensorFlow Lite. It is basically TensorFlow mobile but institutes standardization between the various other (non PC/Desktop) platforms so code can be ported with minimal effort (interchangable with Web, Mobile Device, Servers probably?). Meaning that this is for TensorFlow Lite, not mobile.
 
 ## Step 2: Building a project, and image processing
 The next step is to get all of this actually working with a base. I plan on just using the template OpenCV provided for android that will let us perform some really awesome Computer Vision stuff to the image without having to spend the time to work on Android Image Capture, conversion to Bitmap, etc. Basically, I am going to use the camera capture template to speed up my work.
