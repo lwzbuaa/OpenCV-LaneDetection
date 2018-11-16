@@ -19,7 +19,7 @@ DISCLAIMER (for those who need one): Obviously this ought not to be used directl
 
 ###### This isn't really a tutorial, more of a scratchpad to take notes on my project, and as such, attached to each of these steps is a short explaination but not a line by line analysis of the code. 
 
-## Step 0: Setting up the Android project
+## Step 1: Setting up the Android project
 The first step is really to create the project and setup the TensorFlow and OpenCV Android libraries.
 
 Sidenote: SDK 21 is required, so don't be under the impression you can drive your Audi Q7 with the Nexus One
