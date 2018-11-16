@@ -38,6 +38,8 @@ Source: https://github.com/davidmigloz/go-bees/wiki/Setup-OpenCV-3.1.0-in-Androi
 
 #### How to setup TensorFlow for Android Studio:
 
+## Step 2: Building a project, and image processing
+The next step is to get all of this actually working with a base. I plan on just using the template OpenCV provided for android that will let us perform some really awesome Computer Vision stuff to the image without having to spend the time to work on Android Image Capture, conversion to Bitmap, etc. Basically, I am going to use the camera capture template to speed up my work.
 
-## Step 2: Lane detection
+## Step 3: Lane detection
 A while ago, I wrote a fairly simply python program to perform lane detection (code saved as laneClassify.py), so the first step is to completely repurpose this and rewrite it in java. The procedure is fairly simple
