@@ -20,6 +20,8 @@ DISCLAIMER (for those who need one): Obviously this ought not to be used directl
 ## Step 0: Setting up the Android project
 This isn't really a tutorial, more of a scratchpad to take notes on my project if possible, and as such, attached to each of these steps is a short explaination but not a line by line analysis of the code. The first step is really to create the project and setup the TensorFlow and OpenCV Android libraries.
 
+Sidenote: SDK 21 is required
+
 #### How to setup OpenCV for Android Studio:
 1) https://sourceforge.net/projects/opencvlibrary/files/opencv-android/ <-- Download
 2) File > New > Import Module
