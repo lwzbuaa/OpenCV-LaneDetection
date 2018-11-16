@@ -28,13 +28,14 @@ This isn't really a tutorial, more of a scratchpad to take notes on my project i
 5) Right click on 'app', and in module settings, add module dependency "openCVLibrary"
 
 Add Native libraries:
-1) Create jniLibs in app > src > main
-2) "Open the extracted OpenCV SDK directory. Switch to OpenCV-3.1.0-android-sdk/sdk/native/libs directory.
-3) You will find directories for many CPU architectures. Copy the required architecture/s directory to the jniLibs directory.
-4) Delete all files except libopencv_java3.so.
-5) Add android.useDeprecatedNdk=true to gradle.properties file."
+1) Go to File>Project Structure.
+2) When window opens, under Modules, select app.
+3) Click Dependencies.
+4) Click +.
+5) Select Module Dependencies.
+6) Select :openCVLibrary343.
 
-Source: https://github.com/davidmigloz/go-bees/wiki/Setup-OpenCV-3.1.0-in-Android-Studio-2.2 <-- Literally the best guide to OpenCV for Android
+Source: https://blog.codeonion.com/2015/11/25/creating-a-new-opencv-project-in-android-studio/ <-- Literally the best guide to OpenCV for Android
 
 #### How to setup TensorFlow for Android Studio:
 Google is slowly phasing out the old TensorFlow mobile and is switching to TensorFlow Lite. It is basically TensorFlow mobile but institutes standardization between the various other (non PC/Desktop) platforms so code can be ported with minimal effort (interchangable with Web, Mobile Device, Servers probably?). Meaning that this is for TensorFlow Lite, not mobile.
