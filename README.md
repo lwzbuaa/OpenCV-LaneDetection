@@ -15,7 +15,7 @@ Parts of the project:
   - Wheel movement decisioning
   - Speed (Optional, speed measurements is more of a LIDAR/RADAR type thing, using the camera for this might be an impracticality)
   
-DISCLAIMER (for those who need one): Obviously this ought not to be used directly with a car, so don't do it
+DISCLAIMER (for those who need one): Obviously this ought not to be used directly with a car, so don't do it, I am not going to take responsibility for someone who takes this code (free to use btw) and accidentally crashes their dad's Porsche
 
 ## Step 0: Setting up the Android project
 This isn't really a tutorial, more of a scratchpad to take notes on my project if possible, and as such, attached to each of these steps is a short explaination but not a line by line analysis of the code. The first step is really to create the project and setup the TensorFlow and OpenCV Android libraries.
