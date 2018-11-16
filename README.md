@@ -21,7 +21,7 @@ DISCLAIMER (for those who need one): Obviously this ought not to be used directl
 This isn't really a tutorial, more of a scratchpad to take notes on my project if possible, and as such, attached to each of these steps is a short explaination but not a line by line analysis of the code. The first step is really to create the project and setup the TensorFlow and OpenCV Android libraries.
 
 #### How to setup OpenCV for Android Studio:
-1) http://opencv.org/downloads.html <-- Download
+1) https://sourceforge.net/projects/opencvlibrary/files/opencv-android/ <-- Download
 2) File > New > Import Module
 3) Choose the OpenCV-Version-android-sdk/sdk/java
 4) go to build.gradle, and change compileSdkVersion, buildToolsVersion and targetSdkVersion to latest API you are using
