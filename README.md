@@ -36,7 +36,8 @@ Add Native libraries:
 
 Source: https://github.com/davidmigloz/go-bees/wiki/Setup-OpenCV-3.1.0-in-Android-Studio-2.2 <-- Literally the best guide to OpenCV for Android
 
-  
+#### How to setup TensorFlow for Android Studio:
+
 
 ## Step 2: Lane detection
 A while ago, I wrote a fairly simply python program to perform lane detection (code saved as laneClassify.py), so the first step is to completely repurpose this and rewrite it in java. The procedure is fairly simple
