@@ -125,13 +125,15 @@ public class MainActivity extends Activity implements CameraBridgeViewBase.CvCam
     }
 
     public Mat process(Mat aInputFrame) {
+        Mat input = aInputFrame.clone();
+
         //Start processing
 
-        Mat outputImg = LaneDetection.laneIsolator(aInputFrame);
+        Mat outputImg = LaneDetection.roadSegmentation(input, input.width()/2, input.height()/2, 0.10); //92% accurate
 
         //End processing
         Imgproc.resize(outputImg, outputImg, aInputFrame.size());
-        return outputImg;
+        return input;
     }
 
     public Mat onCameraFrame(CvCameraViewFrame inputFrame) {
