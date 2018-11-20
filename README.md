@@ -43,6 +43,8 @@ Add Native libraries:
 
 Source: https://blog.codeonion.com/2015/11/25/creating-a-new-opencv-project-in-android-studio/ <-- Literally the best guide to OpenCV for Android
 
+https://medium.com/@rdeep/android-opencv-integration-without-opencv-manager-c259ef14e73b <-- How to install OpenCV native libraries for java
+
 #### How to setup TensorFlow for Android Studio:
 Google is slowly phasing out the old TensorFlow mobile and is switching to TensorFlow Lite. It is basically TensorFlow mobile but institutes standardization between the various other (non PC/Desktop) platforms so code can be ported with minimal effort (interchangable with Web, Mobile Device, Servers probably?). Meaning that this is for TensorFlow Lite, not mobile.
 
