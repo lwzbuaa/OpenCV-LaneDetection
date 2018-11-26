@@ -1,8 +1,5 @@
 # QuickDrive
 
-## Inspiration
-It's a little weird my phone has several thousand times the processing power of the Apollo computer but struggles to pre-order my Cold Brew from Starbucks
-
 ## Concept
 Using OpenCV object recognition, as well as TensorFlow by Google to teach the average Android phone to drive
 
@@ -13,12 +10,8 @@ Parts of the project:
   - Object detection
   - Sign detection (coupled with object detection)
   - Wheel movement decisioning
-  - Speed (Optional, speed measurements is more of a LIDAR/RADAR type thing, using the camera for this might be an impracticality)
+  - Speed (Optional, speed measurements is more of a LIDAR/RADAR type thing, using the camera for this might be an impractical or unsafe)
   
-DISCLAIMER (for those who need one): Obviously this ought not to be used directly with a car, so don't do it, I am not going to take responsibility for someone who takes this code and accidentally crashes their dad's Porsche
-
-###### This isn't really a tutorial, more of a scratchpad to take notes on my project, and as such, attached to each of these steps is a short explaination but not a line by line analysis of the code. 
-
 ## Step 1: Setting up the Android project
 The first step is really to create the project and setup the TensorFlow and OpenCV Android libraries.
 
@@ -49,7 +42,7 @@ https://medium.com/@rdeep/android-opencv-integration-without-opencv-manager-c259
 Google is slowly phasing out the old TensorFlow mobile and is switching to TensorFlow Lite. It is basically TensorFlow mobile but institutes standardization between the various other (non PC/Desktop) platforms so code can be ported with minimal effort (interchangable with Web, Mobile Device, Servers probably?). Meaning that this is for TensorFlow Lite, not mobile.
 
 ## Step 2: Building a project, and image processing
-The next step is to get all of this actually working with a base. I plan on just using the template OpenCV provided for android that will let me perform some really awesome Computer Vision stuff. Go through the OpenCV github to see example code and templates
+The next step is to get all of this actually working with a base. I plan on just using the template OpenCV provided for android that will let me perform some really awesome Computer Vision stuff
 
 ## Step 3: Lane detection
 A while ago, I wrote a fairly simply python program to perform lane detection (code saved as laneClassify.py), so the first step is to completely repurpose this and rewrite it in java. The procedure is fairly simple
