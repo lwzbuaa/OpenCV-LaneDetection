@@ -130,7 +130,7 @@ public class MainActivity extends Activity implements CameraBridgeViewBase.CvCam
         //Start processing
 
         Mat outputImg = LaneDetection.roadSegmentation(input, input.width()/2, input.height()/2, 0.10); //92% accurate
-
+        outputImg = LaneDetection.processor(outputImg);
         //End processing
         Imgproc.resize(outputImg, outputImg, aInputFrame.size());
         return input;
