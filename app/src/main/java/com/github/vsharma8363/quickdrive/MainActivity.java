@@ -118,7 +118,7 @@ public class MainActivity extends Activity implements CameraBridgeViewBase.CvCam
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_main);
-        mOpenCvCameraView = (CameraBridgeViewBase)findViewById(R.id.tutorial1_activity_java_surface_view);
+        mOpenCvCameraView = (CameraBridgeViewBase)findViewById(R.id.display);
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setCvCameraViewListener(this);
         mOpenCvCameraView.enableView();
@@ -129,11 +129,10 @@ public class MainActivity extends Activity implements CameraBridgeViewBase.CvCam
 
         //Start processing
 
-        Mat outputImg = LaneDetection.roadSegmentation(input, input.width()/2, input.height()/2, 0.10); //92% accurate
-        outputImg = LaneDetection.processor(outputImg);
+        Mat outputImg = Isolator.laneProcessor(input); //92% accurate
         //End processing
-        Imgproc.resize(outputImg, outputImg, aInputFrame.size());
-        return input;
+
+        return outputImg;
     }
 
     public Mat onCameraFrame(CvCameraViewFrame inputFrame) {
