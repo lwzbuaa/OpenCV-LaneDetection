@@ -17,14 +17,19 @@ setup OpenCV for Android Studio:
 https://medium.com/@rdeep/android-opencv-integration-without-opencv-manager-c259ef14e73b <-- How to install OpenCV native libraries for java
 
 ##### Lane Detection (Py - Working Example)
+
 Using canny transformation to isolate objects
+
 '''python
+
 def laneAngle(frame):
     height = np.size(frame, 0)
     width = np.size(frame, 1)
-
     edges = cv2.Canny(frame, 100, 200)
 '''
+
+Isolating the region of interest using polygon morph (native to OpenCV) and cropping the image
+
 '''python
     rows, cols = edges.shape[:2]
     bottom_left = [cols * 0.1, rows * 0.9]
@@ -35,7 +40,9 @@ def laneAngle(frame):
     # the vertices are an array of polygons (i.e array of arrays) and the data type must be integer
     vertices = np.array([[bottom_left, top_left, top_right, bottom_right]], dtype=np.int32)
     cropped_edges = filter_region(edges, vertices)
+'''
 
+'''python
     # INSERT CODE HERE
     # Find all lines in the image
     hough_lines = cv2.HoughLinesP(cropped_edges, rho=1, theta=np.pi / 180, threshold=20, minLineLength=50,
