@@ -6,7 +6,7 @@
     - Sign detection (coupled with object detection)
   - Wheel movement decisioning (angle, speed data + acceleration data) PID?
   
-##### Setting up the Android project
+### Setting up the Android project
 
 setup OpenCV for Android Studio:
 1) https://sourceforge.net/projects/opencvlibrary/files/opencv-android/ <-- Download
@@ -16,9 +16,9 @@ setup OpenCV for Android Studio:
 5) Right click on 'app', and in module settings, add module dependency "openCVLibrary"
 https://medium.com/@rdeep/android-opencv-integration-without-opencv-manager-c259ef14e73b <-- How to install OpenCV native libraries for java
 
-##### Lane Detection (Py - Working Example)
+### Lane Detection (Py - Working Example)
 
-1) Using canny transformation to isolate objects
+###### 1) Using canny transformation to isolate objects
 
 '''python
 def laneAngle(frame):
@@ -27,7 +27,7 @@ def laneAngle(frame):
     edges = cv2.Canny(frame, 100, 200)
 '''
 
-2) Isolating the region of interest using polygon morph (native to OpenCV) and cropping the image
+###### 2) Isolating the region of interest using polygon morph (native to OpenCV) and cropping the image
 
 '''python
     rows, cols = edges.shape[:2]
@@ -41,7 +41,7 @@ def laneAngle(frame):
     cropped_edges = filter_region(edges, vertices)
 '''
 
-3) Using the hough_lines transformation to isolate lanes [More info](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html)
+###### 3) Using the hough_lines transformation to isolate lanes [More info](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html)
 
 '''python
     hough_lines = cv2.HoughLinesP(cropped_edges, rho=1, theta=np.pi / 180, threshold=20, minLineLength=50,
