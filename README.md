@@ -18,18 +18,18 @@ https://medium.com/@rdeep/android-opencv-integration-without-opencv-manager-c259
 
 ### Lane Detection (Py - Working Example)
 
-###### 1) Using canny transformation to isolate objects
+#### 1) Using canny transformation to isolate objects
 
-'''python
+```python
 def laneAngle(frame):
     height = np.size(frame, 0)
     width = np.size(frame, 1)
     edges = cv2.Canny(frame, 100, 200)
-'''
+```
 
-###### 2) Isolating the region of interest using polygon morph (native to OpenCV) and cropping the image
+#### 2) Isolating the region of interest using polygon morph (native to OpenCV) and cropping the image
 
-'''python
+```python
     rows, cols = edges.shape[:2]
     bottom_left = [cols * 0.1, rows * 0.9]
     top_left = [cols * 0.25, rows * 0.55]
@@ -39,11 +39,11 @@ def laneAngle(frame):
     # the vertices are an array of polygons (i.e array of arrays) and the data type must be integer
     vertices = np.array([[bottom_left, top_left, top_right, bottom_right]], dtype=np.int32)
     cropped_edges = filter_region(edges, vertices)
-'''
+```
 
-###### 3) Using the hough_lines transformation to isolate lanes [More info](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html)
+#### 3) Using the hough_lines transformation to isolate lanes [More info](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html)
 
-'''python
+```python
     hough_lines = cv2.HoughLinesP(cropped_edges, rho=1, theta=np.pi / 180, threshold=20, minLineLength=50,
                                   maxLineGap=50)
     if hough_lines is not None:
@@ -54,6 +54,6 @@ def laneAngle(frame):
     yCenter = height * 0.75
     leftLane = [-1, -1, -1, -1]
     rightLane = [-1, -1, -1, -1]
-'''
+```
 
 
